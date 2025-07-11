@@ -1,0 +1,37 @@
+/*Organization is important, at first, i tought that it would be better if i try to make the design before the primary-configurations, but, making a structure for a schedule of what i am going to do, is more important than design*/
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+ol, ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+    text-wrap: balance;
+}
+/*First basic configuration done, now, i have to focus more on the design, first, i have to choose wich font i am going to use, and what type of pallete i am going to use*/
+@font-face {
+    font-family: "";
+    src: url();
+}
+@font-face {
+    font-family: "";
+    src: url();
+}
+:root {
+    --primary-color:;
+    --second-color:;
+    --third-color:;
+    --first-font:;
+    --second-font:;
+}
+::selection {
+    color: ;
+    background-color: ;
+}
