@@ -17,21 +17,22 @@ h1,h2,h3,h4,h5,h6 {
 }
 /*First basic configuration done, now, i have to focus more on the design, first, i have to choose wich font i am going to use, and what type of pallete i am going to use*/
 @font-face {
-    font-family: "";
-    src: url();
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-ExtraBold.ttf");
 }
 @font-face {
-    font-family: "";
-    src: url();
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-VariableFont_wdth\,wght.ttf");
 }
 :root {
-    --primary-color:;
-    --second-color:;
-    --third-color:;
-    --first-font:;
-    --second-font:;
+    --primary-color: #E5F5D7;
+    --second-color: #B7E4C7;
+    --third-color:#40916C;
+    --forth-color: #081C15;
+    --first-font:Roboto;
+    --second-font:Gilroy;
 }
 ::selection {
-    color: ;
-    background-color: ;
+    color: var(--second-color);
+    background-color: var(--forth-color);
 }
