@@ -12,10 +12,18 @@
 #center {
     width: 56%;
     overflow-y: hidden;
+    position: relative;
 }
 #center img {
-    width: 230px;
+     width: 230px;
+     transition: 0.7s cubic-bezier(0.6,-0.28,0.735,0.045);
     height: 270px;
+    opacity: 0;
+    margin-left: 200px;
+}
+#center.start img {
+    margin-left:0px;
+    opacity: 1;
 }
 #center-image {
     display: flex;
@@ -27,7 +35,7 @@
     text-align: center;
     width: 100%;
     height: 25vh;
-    margin-top: 25px;
+    margin-top: 35px;
     font-family: var(--second-font);
     font-size: 2rem;
 
@@ -68,6 +76,12 @@
     color: var(--primary-color);
     background-color: var(--forth-color);
     cursor: pointer;
+    transition: 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+#center-foot  a:hover {
+    background-color: var(--primary-color);
+    color: var(--forth-color);
+        transition: 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 #left {
     width: 22%;
@@ -91,12 +105,13 @@
 }
 #container-background-circle {
     width: 50px;
-    margin-left: 150px;
+    margin-left: 100px;
     margin-top: 50px;
     margin-bottom: 200px;
     border-radius: 50%;
     height: 50px;
     background-color: var(--second-color);
+    transition: 0.5s cubic-bezier(0.6,-0.28,0.735,0.045) ;
 }
 #container-background-triangle {
     background-color: var(--forth-color);
@@ -104,9 +119,26 @@
     width: 50px;
     position: absolute;
     height: 50px;
+    transform: rotate(-70deg);
+    left: 22%;
+    top: 90%;
+    transition: 0.5s cubic-bezier(0.175,0.885,0.32,1.275);
+}
+#container-background-triangle.start {
     top: 52%;
     left: 22%;
-    transform: rotate(-70deg);
+    animation-duration: 3s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(-70deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 #container-retangles {
     width: 100%;
@@ -121,19 +153,31 @@
     border-radius: 15px;
 }
 #retangle1 {
-    left: -12%;
+    left: -100%;
     z-index: 3;
+    transition: 0.5s cubic-bezier(0.175,0.885,0.32,1.275);
     background-color: var(--third-color);
+}
+#retangle1.start {
+    left: -12%;
 }
 #retangle2 {
     background-color: var(--forth-color);
     z-index: 2;
     top: 10%;
+    left: -100%;
+    transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#retangle2.start {
     left: -5%;
 }
 #retangle3 {
     background-color: var(--second-color);
     top: 20%;
+    left: -100%;
+    transition: 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#retangle3.start {
     left: 0%;
 }
 #square {
@@ -197,17 +241,30 @@
 }
 #retangle4 {
     background-color: var(--second-color);
+    transition: 0.5s cubic-bezier(0.175,0.885,0.32,1.275);
     z-index: 1;
-    transform: translateY(60px);
+    left: 95%;
+}
+#retangle4.start {
+    left: 65%;
 }
 #retangle5 {
     background-color: var(--forth-color);
+    transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 0;
-    transform: translateX(30px);
+    left: 95%;
+}
+#retangle5.start {
     top: 8%;
+    left: 55%;
 }
 #retangle6 {
     background-color: var(--third-color);
     z-index: -1;
-    transform: translateX(50px);
+    transition: 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    top: 17%;
+    left: 95%;
+}
+#retangle6.start {
+    left: 45%;
 }
